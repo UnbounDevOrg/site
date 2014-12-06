@@ -2,13 +2,17 @@
   "name": "ajs-site",
   "version": "0.0.1",
   "private": false,
-  "description": "Personal Website for Austin Brown",
+  "description": "website for UnbounDev",
   "author": "Austin Brown",
   "license": "No License",
   "main": "./server.js",
+  "homepage": "https://github.com/UnbounDev/site",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ajsnapshots/ajs-site"
+    "url": "https://github.com/UnbounDev/site"
+  },
+  "bugs": {
+    "url": "https://github.com/UnbounDev/site/issues"
   },
   "engines": {
     "node": ">=0.8.8"
@@ -46,15 +50,10 @@
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
     "start": "./bin/ghost_start.sh"
   },
-  "bugs": {
-    "url": "https://github.com/ajsnapshots/ajs-site/issues"
-  },
-  "homepage": "https://github.com/ajsnapshots/ajs-site",
   "directories": {
     "test": "test"
   },
   "keywords": [
-    "personal",
     "site",
     "austin",
     "brown"
