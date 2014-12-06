@@ -1,0 +1,14 @@
+
+html {
+    font-family: "proxima-nova",Helvetica,arial,sans-serif;
+    font-weight: 400;
+    color: #111;
+}
+
+a {
+    color: #c8542e;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #384150;
+}

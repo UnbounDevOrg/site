@@ -1,0 +1,15 @@
+
+#ignore config files except for examples
+config/*
+!config/README.md
+!config/examples/
+
+.DS_Store
+.project
+.idea
+nbproject
+.settings
+node_modules
+logs
+public/bower_components
+config/runtime.json

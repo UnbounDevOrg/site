@@ -1,0 +1,43 @@
+
+.linear-all {
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+.linear-height {
+    -webkit-transition: height 0.8s ease;
+    -moz-transition: height 0.8s ease;
+    transition: height 0.8s ease;
+}
+.linear-width {
+    -webkit-transition: width 0.8s ease;
+    -moz-transition: width 0.8s ease;
+    transition: width 0.8s ease;
+}
+
+.delay_1 {
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+}
+
+.pulse {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+
+    -webkit-animation: pulsate 3.5s infinite ease-out;
+    -moz-animation: pulsate 3.5s infinite ease-out;
+    animation: pulsate 3.5s infinite ease-out;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.25; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes pulsate {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.25; }
+    100% { opacity: 1.0; }
+}

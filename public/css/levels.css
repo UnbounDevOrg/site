@@ -1,0 +1,25 @@
+
+/* base */
+.page_border, .page_border_top {
+    z-index: 3;
+}
+.page_body, .page_header, .page_menu, .page_content, .page_footer {
+    z-index: 1;
+}
+/* base */
+
+/* loading */
+.loading-overlay {
+    z-index: 5;
+}
+/* loading */
+
+/* menu */
+.menu {
+    z-index: 2;
+}
+.show_menu {
+    z-index: 4;
+}
+/* menu */
+

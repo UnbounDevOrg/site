@@ -1,0 +1,6 @@
+[global]
+AwsCredentialFile=/global.keys/personal-aws
+ApplicationName=test
+DevToolsEndpoint=git.elasticbeanstalk.us-east-1.amazonaws.com
+EnvironmentName=ajstest-env
+Region=us-east-1

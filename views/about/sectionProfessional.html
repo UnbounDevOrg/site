@@ -1,0 +1,146 @@
+
+{% macro skillSet(title,proficiency,body) %}
+
+    <div>
+        <div class="homepage-skill-border-container">
+            <div class="homepage-skill-border-solid {{proficiency}}"></div>
+            <div class="homepage-skill-border-dashed {{99-proficiency}}"></div>
+        </div>
+        <div class="homepage-skill">
+            <span class="homepage-skill-title ajs-orange">{{ title }}</span>
+            <br />
+            <span class="homepage-skill-body">{{ body }}</span>
+        </div>
+    </div>
+
+{% endmacro %}
+
+{% macro skillBar(title,level) %}
+
+    <li>{{ title }}</li>
+
+    {% for i in range(1, 5) %}
+        <li>
+            {% if i <= level %}
+                <img src="/img/circle-orange.png" />
+            {% endif %}
+        </li>
+    {% endfor %}
+
+{% endmacro %}
+
+{%
+    set skillsLarge = [
+        {"title":"systems development lifecycle","proficiency":60,"body":"Experience managing the simultaneous SDLC for multiple applications from the project concept and UX design through to the API backend, code maintenance, documentation, and best practices."}
+        , {"title":"full stack development","proficiency":90,"body":"Proficient at developing projects from whiteboard concepts to fully functioning user applications with a supporting code base, database architecture, API layer, and cloud based server deployment."}
+    ]
+%}
+
+{%
+    set skillsSmall = [
+        {"title":"PHP","proficiency":100,"body":"Developed and maintained core architecture libraries in PHP, and coupled these with mobile and web applications."}
+        , {"title":"Javascript","proficiency":100,"body":"Created "}
+        , {"title":"Node JS","proficiency":80,"body":"pretty damn good"}
+        , {"title":"HTML/CSS","proficiency":75,"body":"more than passing"}
+        , {"title":"JAVA","proficiency":65,"body":"can definitely work it"}
+    ]
+%}
+
+<div class="homepage-section" id="professional">
+
+    <div class="row">
+        <div class="small-12 columns">
+
+            <div class="blockquote">
+                <p>
+                    <span class="ajs-orange homepage-section-title">Professionally,</span> I've worked with diverse teams of developers and designers to create and scale cloud based infrastructures for use with mobile and web applications. I am equally comfortable with both front- and back-end development and am particularly excited concerning the direction of web based technologies, including Cloud Service Solutions, Javascript and Node JS.
+                </p>
+                <p>
+                    You can <a href="/files/resume_austin_brown.pdf" target="_blank"><span style="font-weight: 700;">download my resume here</span></a>, or continue scrolling to see a brief encapsulation of my professional and personal experiences.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="columns">
+            <span class="ajs-orange homepage-section-title">Technical Skills</span>
+            <br />
+            <br />
+        </div>
+
+        <div class="small-12 columns">
+            {% for skill in skillsLarge %}
+                {{ skillSet(skill.title,skill.proficiency,skill.body) }}
+            {% endfor %}
+        </div>
+
+        <div class="small-12 columns">
+
+            <br />
+            <span class="ajs-navy homepage-section-title" style="font-weight: 700;">Frameworks/Libraries</span>
+            <ul class="small-block-grid-5 homepage-technical-skills">
+
+                <li></li>
+                <li>Beginner</li>
+                <li>Familiar</li>
+                <li>Proficient</li>
+                <li>Expert</li>
+
+                {{ skillBar('AWS',4) }}
+                {{ skillBar('Dojo',4) }}
+                {{ skillBar('Jquery',4) }}
+                {{ skillBar('Node JS',3) }}
+                {{ skillBar('Git',3) }}
+                {{ skillBar('Android',3) }}
+                {{ skillBar('IOS',2) }}
+                {{ skillBar('Windows Phone',1) }}
+
+            </ul>
+
+            <br />
+            <span class="ajs-navy homepage-section-title" style="font-weight: 700;">Languages</span>
+            <ul class="small-block-grid-5 homepage-technical-skills">
+
+                <li></li>
+                <li>Beginner</li>
+                <li>Familiar</li>
+                <li>Proficient</li>
+                <li>Expert</li>
+
+                {{ skillBar('Php',4) }}
+                {{ skillBar('Javascript',4) }}
+                {{ skillBar('HTML',3) }}
+                {{ skillBar('CSS',3) }}
+                {{ skillBar('Bash',3) }}
+                {{ skillBar('Java',3) }}
+                {{ skillBar('C#',1) }}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        {# for skill in skillsSmall %}
+
+            <div class="small-12 medium-6 columns">
+                {{ skillSet(skill.title,skill.proficiency,skill.body) }}
+            </div>
+
+        {% endfor #}
+
+    </div>
+
+    <a href="#personal"><div class="homepage-nextSection ajs-orange">personal</div></a>
+
+</div>

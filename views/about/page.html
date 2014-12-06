@@ -1,0 +1,29 @@
+
+{% extends "global/pageBase.html" %}
+
+{% block css %}
+    <link href="/css/homePage.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block js %}
+    <script src="/js/homePage.js" rel="script" type="text/javascript"></script>
+{% endblock %}
+
+{% set page_title = "home" %}
+
+{% block page_content %}
+
+    {% include 'about/sectionLocation.html' %}
+    {% include 'about/sectionProfessional.html' %}
+    {% include 'about/sectionPersonal.html' %}
+    {% include 'about/sectionHistory.html' %}
+
+    <div class="homepage-footer">
+        <div class="row">
+            <div class="columns">
+                This site is constructed with Nunjucks and plain old HTML/CSS with a dash of client side Javascript, and is hosted using NodeJS on AWS.
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
