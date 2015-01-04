@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "config": "*",
-    "ghost": "git://github.com/ajsnapshots/Ghost.git#stable",
+    "ghost": "git://github.com/UnbounDev/Ghost.git#stable",
     "express": "4.x",
     "hbs": "^2.7.0",
     "less": "1.x",
@@ -48,13 +48,14 @@
     "pretest": "jshint lib test",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/ test/acceptance/",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
-    "start": "./bin/ghost_start.sh"
+    "start": "./bin/aws_start.sh"
   },
   "directories": {
     "test": "test"
   },
   "keywords": [
     "site",
+    "unboundev",
     "austin",
     "brown"
   ]

@@ -3,8 +3,6 @@ var nunjucks = require('nunjucks')
     , path = require('path')
     , ghost = require('ghost');
 
-var ghostConfigPath = path.join(__dirname, 'config/ghost_config.js');
-
 //switch view to nunjucks
 var view = function(app) {
 
