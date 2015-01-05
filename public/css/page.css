@@ -55,6 +55,14 @@
     text-align: center;
 }
 
+.navigation {
+    background-color: #384150;
+}
+.navigation a:hover {
+    color: #c8542e;
+    text-decoration: underline;
+}
+
 .menu {
     position: absolute;
     top: 0;
