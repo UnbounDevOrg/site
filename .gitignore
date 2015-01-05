@@ -4,6 +4,9 @@ config/*
 !config/README.md
 !config/examples/
 
+#temp ghost db
+temp_ghost
+
 .DS_Store
 .project
 .idea
