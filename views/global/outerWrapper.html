@@ -52,22 +52,6 @@
 </head>
 <body>
 
-
-    <!-- bit of a hacked in nav for the moment -->
-    <div class="navigation">
-        <div class="row">
-            <div class="small-12 columns">
-                <div class="container">
-                    <p class="content">
-                        <a id="blog" href="">blog</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a id="about" href="">about</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {% block page_body %}
         default body content
     {% endblock %}
@@ -77,14 +61,6 @@
     <script src="/js/foundation/foundation.min.js"></script>
     <script>
         $(document).foundation();
-
-
-        var aboutURL = (document.domain)
-            , blogURL = 'blog.' + (document.domain).replace('www.','');
-
-        document.getElementById('about').href = 'http://' + aboutURL;
-        document.getElementById('blog').href = 'http://' + blogURL;
-
     </script>
     <!-- base foundation-ware -->
 

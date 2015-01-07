@@ -63,9 +63,7 @@
                     {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
                 </a>
                 <p class="content">
-                    <a href="{{@blog.url}}">blog</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a id="about" href="">about the author</a>
+                    <a href="{{@blog.url}}">{{@blog.title}}</a>
                 </p>
             </div>
         </nav>
@@ -91,14 +89,6 @@
         <script src="{{asset 'js/highlight.js'}}"></script>
         <script src="{{asset 'js/phantom.js'}}"></script>
         <script src="{{asset 'js/hbs-debug.js'}}"></script>
-
-        {{! write the correct about page url}}
-        <script>
-
-            var aboutURL = (document.domain).replace('blog.','');
-            document.getElementById('about').href = 'http://' + aboutURL;
-
-        </script>
 
     </body>
 </html>
