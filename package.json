@@ -19,14 +19,18 @@
   },
   "dependencies": {
     "config": "*",
-    "ghost": "git://github.com/UnbounDev/Ghost.git#stable",
     "express": "4.x",
+    "ghost": "git://github.com/UnbounDev/Ghost.git#stable",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-run": "^0.3.0",
     "hbs": "^2.7.0",
     "less": "1.x",
     "less-middleware": "*",
     "metalogger": "*",
     "nodebootstrap-clustering": "*",
-    "nodebootstrap-server": "*",
+    "nodebootstrap-server": "^1.5.0",
     "nunjucks": "^1.1.0",
     "prerender-node": "^1.1.0",
     "underscore": "1.x",
@@ -48,7 +52,7 @@
     "pretest": "jshint lib test",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/ test/acceptance/",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
-    "start": "./bin/aws_start.sh"
+    "start": "grunt up"
   },
   "directories": {
     "test": "test"

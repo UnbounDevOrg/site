@@ -19,4 +19,5 @@ export NODE_LOGGER_GRANULARLEVELS=1
 
 export NODE_CONFIG_DIR="$NBS_CURR_PROJECT_PATH/config"
 
-node server.js
+node server_site_austin.js
+
